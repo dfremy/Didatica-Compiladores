@@ -1,0 +1,10 @@
+﻿Não modifiquei nada na criação do projeto, então vou sempre por 'no meu caso' em situações que possa ser diferente caso você tenha mexido em algo.
+
+O Xtext gera muita coisa, mas o unico projeto que você precisa se preocupar é o primeiro (o que não tem .feature, .ide, .tests nem nada do tipo no final), que no meu caso é o org.xtext.example.entity
+
+Para análise léxica e sintática apenas um arquivo é necessário que fica no primeiro pacote (sem .generator, .scoping, .validation), que no meu caso é org.xtext.example, e o arquivo é, no meu caso, Entity.xtext.
+
+
+Após já ter feito a parte léxica e sintática, gerado os artefatos, ter levantado o outro eclipse para sua linguagem e feito um arquivo de teste, um bom jeito de debugar é clicar com o botão direito no seu arquivo de teste > Open with > Other... > Sample Reflexive Ecore Model Editor.
+
+Com ele é possível ver a árvore de uso de regras e clicando nas regras, é possível ver o que ele conseguiu extrair delas.

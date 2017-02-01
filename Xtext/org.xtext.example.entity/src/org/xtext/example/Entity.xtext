@@ -1,0 +1,30 @@
+grammar org.xtext.example.Entity with org.eclipse.xtext.common.Terminals
+
+generate entity "http://www.xtext.org/example/Entity"
+
+Model:
+	elements+=expression;
+	
+expression:
+	expressao_un=expression_unity (operador=operator expressao=expression)?
+;
+	
+expression_unity:
+	(menos=MINUS expressao_un=expression_unity)
+	| (abre_paren=LPAREN expressao=expression fecha_paren=RPAREN)
+	| valor=INT
+;
+
+operator:
+	mais=PLUS
+	| menos=MINUS
+	| mult=MULT
+	| div=DIV
+;
+
+terminal MINUS: '-' ;
+terminal PLUS: '+' ;
+terminal DIV: '/' ;
+terminal MULT: '*' ;
+terminal LPAREN: '(' ;
+terminal RPAREN: ')' ;

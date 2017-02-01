@@ -18,3 +18,7 @@ Warning serão os conflitos que ele encontrar, se ultrapassar o numero que você
 
 Para testar o meu compilador eu apenas dou Run (as Java Application) em main/MainTest.java
 O filePath declarado nesse arquivo é o arquivo que o compilador deve tentar compilar.
+
+
+Para facilitar debugar, no meu exemplo eu coloquei um Logger que é possível chamar de dentro das regrar para printar coisas na tela.
+Perceba que ele executa as coisas na ordem, então se uma chamada ao Logger for feita entre a chamada de dois não-terminais, ele irá printar apenas após ter terminado de ler o primeiro não-terminal e antes de começar a ler o segundo não-terminal.
